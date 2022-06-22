@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: gainsboro;
 }
 
 a{
@@ -10,7 +11,7 @@ a{
 .container{
     display: grid;
     grid-template-columns: 1fr 4fr 1.25fr;
-    grid-template-rows: 0.5fr 0.25fr 1fr 0.25fr 1fr;
+    grid-template-rows: 0.5fr 0.2fr 1fr 0.25fr 1fr;
 }
 
 .sidebar{
@@ -18,21 +19,26 @@ a{
     grid-column: 1 / 2;
     background-color: aqua;
     display: grid;
-    grid-template-columns: 0.5fr;
+    grid-template-columns: 200px;
     grid-template-rows: 0.025fr 0.5fr;
     font-size: 22px;
-    padding: 0 50px 0 15px;
+    padding: 0 50px 0 20px;
 }
 
 .logo{
     grid-row: 1 / 2;
     font-size: 26px;
-    padding-left: 5px;
+    display: grid;
+    align-items: center;
 }
 
 .logo img{
-    height: 30px;
-    /* float: left; */
+    width: 30px;
+    float: left;
+}
+
+.logo b{
+    align-self: center;
 }
 
 .sidebar ul{
@@ -55,12 +61,24 @@ a{
     padding-right: 30px;
 }
 
+.sidebar svg{
+    fill: rgb(59, 54, 54);
+
+}
+
 .sidebar a{
     color: rgb(59, 54, 54);    
 }
 
 .sidebar li:hover, .logo p:hover{
     background-color: white;
+    border-radius: 15px;
+    padding-left: 5px;
+}
+
+.sidebar li:active, .logo p:active{
+    background-color: gray;
+    color: white;
 }
 
 .header{
@@ -84,7 +102,6 @@ a{
 
 .search {  
     grid-column: 1/3;
-    /* justify-content: center; */
 }
 
 .search img{
@@ -167,14 +184,16 @@ input:focus{
     color: rgb(59, 54, 54);
 }
 
-.header-menu button:hover{
-    background-color: gray;
-}
 
-.header-menu button:active{
+.header-menu button:hover{
     background-color: black;
     color: white;
 }
+
+.header-menu button:active{
+    background-color: gray;
+}
+
 
 .dash-title{
     margin: 0;
@@ -189,7 +208,7 @@ input:focus{
 .dashboard{
     background-color: gainsboro;
     margin: 0;
-    padding: 10px 20px;
+    padding: 20px;
     gap: 10px;
     grid-column: 2 / 3;
     grid-row: 3 / 6;
@@ -200,15 +219,16 @@ input:focus{
 }
 
 .cards{
-    /* height: 150px; */
     background-color: white;
     border-radius: 10px;
     padding: 15px 25px;
     border-left: solid 5px orange;
     box-shadow: 2px 2px 5px gray;
     display: grid;
-    /* grid-template-rows: repeat(auto-fill, minmax(100px, 2fr)); */
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    /* grid-template-rows: repeat(auto-fill, minmax(0.1fr, 1fr)); */
 }
+
 
 .cards img{
     float: right;
@@ -224,15 +244,14 @@ input:focus{
     grid-column: 3 / 4;
     grid-row: 3 / 6;
     background-color: gainsboro;
-    padding: 10px 20px;
+    padding: 20px;
     display: grid;
-    grid-template-rows: 1fr 0.25fr 1fr;
+    grid-template-rows: 1fr 0.3fr 1fr;
 }
 
 .announcements, .trending{
     background-color: white;
     margin: 0;
-    /* padding: 10px; */
     padding: 15px 25px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px gray;
@@ -248,6 +267,7 @@ input:focus{
 .ad-blocks{
     box-shadow: 0px -1px 0.5px gray;
     padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 .announcements .ad-blocks:first-child{
@@ -262,23 +282,24 @@ input:focus{
 
 .trending{
     display: grid;
-    /* grid-template-rows: repeat(4,0.25fr); */
-    align-items: space-evenly;
-    justify-content: center;
+    align-content: center;
+    justify-items: center;
     font-size: 14px;
-    gap: 20px;
+    gap: 30px;
 }
 
 .trending img{
-    /* grid-column: 1/2; */
     float: left;
-    width: 40px;
-    /* padding-right: 35px; */
+    width: 35px;
     background-color: orange;
     border-radius: 50%;
 }
 
-.trending text{
-    padding-left: 30px;
+
+.trending b, text{
+    padding-left: 20px;
 }
+
+
+
 
