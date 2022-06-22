@@ -16,7 +16,7 @@ a{
 .sidebar{
     grid-row: 1 / 6;
     grid-column: 1 / 2;
-    background-color: #bae6fd;
+    background-color: aqua;
     color: black;
     display: grid;
     grid-template-columns: 0.5fr;
@@ -61,31 +61,50 @@ a{
 .header{
     grid-row: 1 / 2;
     grid-column: 2 / 4;
-    background-color: #fef08a;
+    background-color: white;
     display: grid;
     grid-template-columns: 5fr;
     grid-template-rows: 0.25fr 0.25fr;
+    box-shadow: unset 10px 10px 5px black;
 }
 
 .header-info{
     grid-row: 1 / 2;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 0.5fr 2.5fr 2fr;
     align-items: center;
-    /* align-content: center; */
-    /* justify-items: center; */
-    /* position: relative; */
+    justify-items: center;
+}
+
+
+.search {  
+    grid-column: 1/3;
+    /* justify-content: center; */
 }
 
 .search img{
     float: left;
+    
 }
 
+input{
+    border: none;
+    border-radius: 15px;
+    min-height: 24px;
+    background-color: gainsboro;
+    width: 40vw;
+    box-shadow: 2px 2px 2px gray;
+}
+
+input:focus{
+    border: none;
+}
 
 .user-info{
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
     font-size: 22px;
     padding: 20px;
+    justify-self: center;
     /* margin-right: auto; */
     /* align-items: center; */
     /* position: right; */
@@ -93,28 +112,147 @@ a{
 
 .user-info img{
     float: left;
-    padding-right: 35px;
+    padding-right: 20px;
+    height: 30px;
 }
 
+
+
+.header-menu{
+    display: grid;
+    grid-template-columns: 0.5fr 2.5fr 2fr;
+    align-items: center;
+     box-shadow:  0px 2px 1px gray;
+}
+
+.user-image{
+    grid-column: 1 / 2;
+    justify-self: end;
+}
+
+.user-image img{
+    height: 100px;
+    padding: 10px 20px 20px 50px;
+}
+
+.greeting{
+    grid-column: 2 / 3;
+}
+
+.greeting h1{
+    font-size: 30px;
+}
+
+.buttons{
+    grid-column: 3 / 4;
+    justify-self: center;
+    align-self: end;
+    padding-bottom: 30px;
+}
+
+.header-menu button{
+    min-width: 80px;
+    min-height: 30px;
+    font-size: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: aqua;
+    font-weight: bold;
+}
+
+.dash-title{
+    margin: 0;
+    padding-left: 20px;
+    background-color: gainsboro;
+    /* box-shadow: inset 0px 2px 0px black; */
+    display: grid;
+    align-items: end;
+    /* font-size: 20px; */
+    /* grid-template-rows: 0.25fr; */
+    z-index: -1;
+}
+
+
 .dashboard{
-    background-color: gray;
-    padding: 10px;
+    background-color: gainsboro;
+    margin: 0;
+    padding: 10px 20px;
     gap: 10px;
     grid-column: 2 / 3;
     grid-row: 3 / 6;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+    gap: 20px;
 }
 
 .cards{
-    height: 200px;
-    background-color:#fef08a;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    border-left: solid 5px orange;
+    box-shadow: 2px 2px 5px gray;
+    display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
 }
 
-.sidebar_dash{
+.cards img{
+    float: right;
+    padding-left: 20px;
+}
+.sidebar-dash{
     grid-column: 3 / 4;
     grid-row: 3 / 6;
-    background-color: #bae6fd;
+    background-color: gainsboro;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-rows: 1fr 0.25fr 1fr;
+    /* gap: 5px; */
+    
+}
+
+.announcements, .trending{
+    background-color: white;
+    margin: 0;
+    /* padding: 10px; */
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.announcements{
+    display: grid;
+    grid-template-rows: repeat(3, 0.5fr);
+    align-items: space-evenly;
+    font-size: 14px;
+}
+
+.ad-blocks{
+    box-shadow: 0px -1px 0.5px gray;
+    padding-top: 20px;
+}
+
+.announcements .ad-blocks:first-child{
+    box-shadow: none;
+    padding-top: 15px;
+}
+
+.trending-title{
+    align-self: end;
+}
+
+.trending{
+    display: grid;
+    align-items: space-evenly;
+    justify-content: space-around;
+    font-size: 15px;
+    padding-top: 40px;
+}
+
+.trending img{
+    float: left;
+    width: 40px;
+    padding-right: 25px;
 }
